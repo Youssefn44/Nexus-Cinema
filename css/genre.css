@@ -1,0 +1,87 @@
+
+/* Genre Page Styles */
+.genres {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.genre {
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.genre h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.genre .movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.genre .movie {
+    flex: 1 1 150px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.genre .movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.genre .movie p {
+    color: #fff;
+    font-size: 1em;
+}
+/* Genre Page Styles */
+.genres {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.genre {
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.genre h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.genre .movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.genre .movie {
+    flex: 1 1 150px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.genre .movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.genre .movie p {
+    color: #fff;
+    font-size: 1em;
+}

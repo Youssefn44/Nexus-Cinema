@@ -1,0 +1,250 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0056b3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+.navbar ul li {
+    margin: 0 30px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-family: fantasy;
+    font-size: 150%;
+    text-decoration: none;
+}
+.navbar form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar input[type="text"] {
+    padding: 5px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar input[type="text"]:focus {
+    width: 300px;
+}
+
+.navbar button[type="submit"] {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button[type="submit"]:hover {
+    background-color: #004080;
+}
+
+.navbar input {
+    padding: 5px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    transition: width 0.4s ease-in-out;
+}
+
+.navbar input:focus {
+    width: 300px;
+}
+
+/* Content Styles */
+.content {
+    padding: 13px;
+    margin-top: -5px;
+    flex: 1;
+    overflow: auto;
+}
+
+/* Movies Styles */
+.movies {
+    display: flex;
+    overflow-x: auto;
+    border: 0.5px solid #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.movies div {
+    margin: 10px;
+    text-align: center;
+}
+
+.movies img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+
+
+/* Book Tickets Button Styles */
+.book-ticket {
+    background-color: #436385; /* Color for the button */
+    color: #FFFFFF; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding around text */
+    margin-top: 10px; /* Space above the button */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Cursor indicates clickable item */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+#book-tickets-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.movie-details {
+    flex: 1;
+    padding: 10px;
+}
+
+.seats-container-wrapper {
+    flex: 2;
+    padding: 10px;
+}
+.book-ticket:hover {
+    background-color: #364f6b; /* Darker shade on hover */
+}
+
+
+.showtime, .seats {
+    margin-top: 20px;
+}
+/* About Info Styles */
+.about-info {
+    border: 1px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #111;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+#book-tickets-content .movie img {
+    width: 350px; /* Increase the image size */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.dropdown {
+    margin: 20px 0;
+}
+
+.dropdown select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.seats-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 seats per row */
+    gap: 10px;
+    justify-content: center;
+    background-color: #000; /* Ensure the background is black */
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+
+.screen {
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+}
+.confirm-booking-button {
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensure the button takes its own line */
+    margin-left: auto;
+    margin-right: auto; /* Center the button */
+}
+
+.confirm-booking-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.booking-confirmation {
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 100px; /* Center vertically with some margin from the top */
+}
+
+.booking-confirmation button {
+    background-color: #0056b3; /* Blue color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-confirmation button:hover {
+    background-color: #004494; /* Darker blue on hover */
+}

@@ -1,0 +1,24 @@
+/* Styles for seats */
+.seat {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff; /* Ensure text color is white */
+}
+
+.seat.available {
+    background-color: #28a745;
+}
+
+.seat.booked {
+    background-color: #dc3545;
+}
+
+.seat.selected {
+    background-color: #ffc107; /* Selected seat color */
+}
