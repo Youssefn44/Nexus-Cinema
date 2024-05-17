@@ -94,7 +94,7 @@ $past_bookings_result = $conn->query($past_bookings_sql);
                             <h3 class="text-dark"><?php echo $booking['title']; ?></h3>
                             <p class="text-dark">Showtime: <?php echo $booking['show_time']; ?></p>
                             <p class="text-dark">Seat: <?php echo $booking['seat_id']; ?></p>
-                            <p class="text-dark">Price: $<?php echo $booking['price']; ?></p>
+                            <p class="text-dark">Price: <?php echo $booking['price']; ?> L.E</p>
                         </div>
                     <?php endwhile; ?>
                 </div>
@@ -109,7 +109,7 @@ $past_bookings_result = $conn->query($past_bookings_sql);
                             <h3 class="text-dark"><?php echo $booking['title']; ?></h3>
                             <p class="text-dark">Showtime: <?php echo $booking['show_time']; ?></p>
                             <p class="text-dark">Seat: <?php echo $booking['seat_id']; ?></p>
-                            <p class="text-dark">Price: $<?php echo $booking['price']; ?></p>
+                            <p class="text-dark">Price: <?php echo $booking['price']; ?>L.E</p>
                         </div>
                     <?php endwhile; ?>
                 </div>

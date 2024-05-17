@@ -23,27 +23,33 @@ if (isset($_GET['movie_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Tickets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/seats.css"> <!-- Include your seats.css file -->
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">NEXUS Cinema</div>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <?php
-                if(isset($_SESSION['user_id'])) {
-                    echo '<li><a href="profile.php">Profile</a></li>';
-                    echo '<li><a href="php/logout.php">Logout</a></li>';
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.php">NEXUS Cinema</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <?php
+                if (isset($_SESSION['user_id'])) {
+                    echo '<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="php/logout.php">Logout</a></li>';
                 } else {
-                    echo '<li><a href="login.php">Login</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
                 }
-            ?>
-            <li><a href="genre.php">Genre</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-            <li><a href="about.php">About</a></li>
-        </ul>
-        <input type="text" placeholder="Search">
+                ?>
+                <li class="nav-item"><a class="nav-link" href="genre.php">Genre</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+            </ul>
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
     </nav>
     <div class="content" id="book-tickets-content">
         <div class='movie-details'>
@@ -82,5 +88,8 @@ if (isset($_GET['movie_id'])) {
         </div>
     </div>
     <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,9 @@
-<!-- login.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - NEXUS Cinema</title>
-    <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -20,7 +18,7 @@
                 <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                 <?php
                 session_start();
-                if(isset($_SESSION['user_id'])) {
+                if (isset($_SESSION['user_id'])) {
                     echo '<li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>';
                     echo '<li class="nav-item"><a class="nav-link" href="php/logout.php">Logout</a></li>';
                 } else {
@@ -33,48 +31,52 @@
             </ul>
         </div>
     </nav>
-    <div class="login-container">
-        <?php
-        if(isset($_SESSION['error'])) {
-            echo '<p class="error">' . $_SESSION['error'] . '</p>';
-            unset($_SESSION['error']);
-        }
-        ?>
-        <div class="form-container sign-in-container">
-            <form action="php/signin.php" method="POST">
-                <h2>Sign In</h2>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-        <div class="form-container sign-up-container">
-            <form action="php/signup.php" method="POST">
-                <h2>Sign Up</h2>
-                <input type="text" name="firstname" placeholder="First Name" required>
-                <input type="text" name="lastname" placeholder="Last Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h2>Welcome Back!</h2>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h2>Hello, Friend!</h2>
-                    <p>Enter your personal details and start your journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+    <div class="container">
+        <div class="login-container">
+            <div class="form-container sign-in-container">
+                <form action="php/signin.php" method="POST">
+                    <h2>Sign In</h2>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="form-container sign-up-container">
+                <form action="php/signup.php" method="POST">
+                    <h2>Sign Up</h2>
+                    <input type="text" name="firstname" placeholder="First Name" required>
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h2>Welcome Back!</h2>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h2>Hello, Friend!</h2>
+                        <p>Enter your personal details and start your journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <?php
+        if (isset($_SESSION['message'])) {
+            $msg_type = $_SESSION['msg_type'];
+            $message = $_SESSION['message'];
+            echo "<div class='custom-alert alert-$msg_type'>$message</div>";
+            unset($_SESSION['message']);
+            unset($_SESSION['msg_type']);
+        }
+        ?>
     </div>
     <script src="js/script.js"></script>
-    <!-- Include Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

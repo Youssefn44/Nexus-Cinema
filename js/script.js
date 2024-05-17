@@ -98,7 +98,7 @@ function displayBookingDetails(seatNumbers, totalPrice) {
         <div class="booking-confirmation">
             <h2>Booking Confirmed!</h2>
             <p>Seats: ${seatNumbers.join(", ")}</p>
-            <p>Total Price: $${totalPrice}</p>
+            <p>Total Price: ${totalPrice} L.E </p>
             <button onclick="window.location.href='index.php'">Return to Homepage</button>
         </div>
     `;
